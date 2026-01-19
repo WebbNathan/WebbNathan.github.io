@@ -1,45 +1,150 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Nathan Webb | Electrical Engineering Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nathan Webb</title>
+  <meta name="description" content="Nathan Webb — Electrical & Computer Engineering undergraduate focused on DSP, FPGA design, and signal processing." />
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#444;
+      --link:#1a0dab;     /* classic link blue */
+      --maxw: 980px;
+    }
+
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.55;
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 28px auto 60px;
+      padding: 0 18px;
+    }
+
+    h1{
+      font-size: 46px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle{
+      font-size: 20px;
+      color: var(--muted);
+      margin: 0 0 8px 0;
+    }
+
+    .focus{
+      font-size: 20px;
+      color: var(--muted);
+      margin: 0 0 22px 0;
+    }
+
+    h2{
+      font-size: 34px;
+      margin: 26px 0 10px 0;
+      font-weight: 700;
+    }
+
+    .project{
+      margin: 18px 0 26px 0;
+    }
+
+    .project-title{
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+
+    .project-desc{
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+
+    a{
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .contact p{
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    /* Optional: keep things readable on small screens */
+    @media (max-width: 520px){
+      h1{ font-size: 38px; }
+      h2{ font-size: 28px; }
+      .project-title{ font-size: 21px; }
+      .subtitle, .focus, .project-desc, .contact p { font-size: 17px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Nathan Webb</h1>
-  <p>Electrical & Computer Engineering Undergraduate – University of Arizona</p>
-  <p>Focus: DSP, FPGA design, and signal processing</p>
+  <main class="wrap">
+    <header>
+      <h1>Nathan Webb</h1>
+      <p class="subtitle">Electrical &amp; Computer Engineering Undergraduate &ndash; University of Arizona</p>
+      <p class="focus">Focus: DSP, FPGA design, and signal processing</p>
+    </header>
 
-  <h2>Projects</h2>
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
 
-  <h3>FPGA-Based FIR Filter - Ongoing</h3>
-  <p>
-    Designed and implemented a parameterized FIR band-pass filter using fixed-point (Q1.15) arithmetic on FPGA.
-    Focused on hardware-efficient architectures, including multiplier pipelines and binary adder trees.
-  </p>
-  <p>
-    <a href="https://github.com/WebbNathan/FIR-Filter-Design">View Code</a>
-  </p>
+      <article class="project">
+        <h3 class="project-title">FPGA-Based FIR Filter - Ongoing</h3>
+        <p class="project-desc">
+          Designed and implemented a parameterized FIR band-pass filter using fixed-point (Q1.15) arithmetic on FPGA.
+          Focused on hardware-efficient architectures, including multiplier pipelines and binary adder trees.
+        </p>
+        <a href="https://github.com/WebbNathan/FIR-Filter-Design" target="_blank" rel="noopener">View Code</a>
+      </article>
 
-  <h3>System Identification of LTI Systems - Ongoing</h3>
-  <p>
-    Modeled unknown LTI systems using convolution matrices and least-squares estimation.
-    Analyzed effects of noise, conditioning, and matrix rank on estimation accuracy.
-  </p>
-  <p>
-    <a href="lti-least-squares.html">View Write-Up</a>
-    <a href="https://github.com/WebbNathan/System-Identification">View Code</a>
-  </p>
+      <article class="project">
+        <h3 class="project-title">System Identification of LTI Systems - Ongoing</h3>
+        <p class="project-desc">
+          Modeled unknown LTI systems using convolution matrices and least-squares estimation.
+          Analyzed effects of noise, conditioning, and matrix rank on estimation accuracy.
+        </p>
+        <p class="project-desc" style="margin-top:-6px;">
+          <!-- Optional: link to your PDF write-up page -->
+          <a href="lti-least-squares.html">Read Write-Up (PDF)</a>
+          &nbsp;|&nbsp;
+          <a href="https://github.com/WebbNathan/System-Identification" target="_blank" rel="noopener">View Code</a>
+        </p>
+      </article>
 
-  <h3>Signal Modeling and Aliasing Mitigation</h3>
-  <p>
-    Built a Python framework to simulate quantization, time jitter, noise, and aliasing.
-    Implemented anti-alias filtering using convolution and FFT methods.
-  </p>
-  <p>
-    <a href="https://github.com/WebbNathan/Digital-Signal-Simulation-Aliasing">View Code</a>
-  </p>
+      <article class="project">
+        <h3 class="project-title">Signal Modeling and Aliasing Mitigation</h3>
+        <p class="project-desc">
+          Built a Python framework to simulate quantization, time jitter, noise, and aliasing.
+          Implemented anti-alias filtering using convolution and FFT methods.
+        </p>
+        <a href="https://github.com/WebbNathan/Digital-Signal-Simulation-Aliasing" target="_blank" rel="noopener">View Code</a>
+      </article>
+    </section>
 
-  <h2>Contact</h2>
-  <p>Emails: webbn@arizona.edu | webbnathana@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/WebbNathan">github.com/WebbNathan</a></p>
+    <section class="contact" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+
+      <p>
+        Emails: <a href="mailto:webbn@arizona.edu">webbn@arizona.edu</a> |
+        <a href="mailto:webbnathana@gmail.com">webbnathana@gmail.com</a>
+      </p>
+
+      <p>
+        GitHub: <a href="https://github.com/WebbNathan" target="_blank" rel="noopener">github.com/WebbNathan</a>
+      </p>
+    </section>
+  </main>
 </body>
 </html>
